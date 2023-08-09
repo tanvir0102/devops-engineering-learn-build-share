@@ -1,0 +1,10 @@
+variable "doa_vpc_cidr" {}
+
+variable "doa_subnet_web01_public_cidr" {}
+variable "doa_subnet_web02_public_cidr" {}
+variable "doa_subnet_app01_private_cidr" {}
+variable "doa_subnet_app02_private_cidr" {}
+variable "doa_subnet_db01_private_cidr" {}
+variable "doa_subnet_db02_private_cidr" {}
+
+variable "access_ip" {}
