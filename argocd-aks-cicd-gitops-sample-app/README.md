@@ -39,8 +39,21 @@ kubectl create ns argohelmtest
 ```shell
 argocd app create helm-guestbook --repo https://github.com/argoproj/argocd-example-apps.git --path helm-guestbook --dest-server https://kubernetes.default.svc --dest-namespace argohelmtest
 ```
-#### Step 4.4: Check the status of the Application
+#### Step 4.4: Check the status of the Application using CLI Command as well in ArgoCD UI
 ```shell
 argocd app get helm-guestbook
 ```
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/74e43ef7-4261-4679-ae43-5f5e80e8d7c5)
+
+#### Step 4.5: Select the application and click on the SYNC
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/dd7b2d8a-1a8d-4683-8a0f-f06848057b41)
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/f9ce78ae-e2c2-4fa5-9695-ebcc73e0ec78)
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/1a527168-baaf-4838-b288-a31ea8499a3c)
+
+
+
+
+
+
+
 
