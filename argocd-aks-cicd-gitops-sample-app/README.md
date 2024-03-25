@@ -10,5 +10,5 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 kubectl get svc -n argocd
 ```
-### Step 02: Log in to ArgoCD UI by followiing the below steps
-[ArgoCD Login URL](HTTP://PublicID)
+### Step 02: Log in to ArgoCD UI by following the below steps
+[ArgoCD Login URL using the Public IP](HTTP://20.24.161.133)
