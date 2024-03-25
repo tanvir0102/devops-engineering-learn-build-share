@@ -21,4 +21,17 @@
 # az login --service-principal -u {appId/ClientId} -p {password/client_secret} --tenant {tenant}
 ```
 
+### Step 05: Update the variables with value ****** in variables.tf
+"subscription_id": id
+"client_id": appId
+"client_secret": password
+"tenant_id": tenant
 
+### Step 06: Execute the below terraform command to setup the AKS infrastructure on Azure Cloud
+```shell
+terraform init
+terraform plan -out "plan.out"
+terraform apply plan.out
+```
+
+### Step 07: 
