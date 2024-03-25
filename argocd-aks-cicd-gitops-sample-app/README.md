@@ -46,9 +46,15 @@ argocd app get helm-guestbook
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/74e43ef7-4261-4679-ae43-5f5e80e8d7c5)
 
 #### Step 4.5: Select the application and click on the SYNC
+```shell
+argocd app sync helm-guestbook
+kubectl patch svc helm-guestbook -n argohelmtest -p '{"spec": {"type": "LoadBalancer"}}'
+```
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/dd7b2d8a-1a8d-4683-8a0f-f06848057b41)
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/f9ce78ae-e2c2-4fa5-9695-ebcc73e0ec78)
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/1a527168-baaf-4838-b288-a31ea8499a3c)
+
+### Step 5: Create an App using a Manual Approach
 
 
 
