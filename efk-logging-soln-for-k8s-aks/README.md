@@ -35,3 +35,8 @@ Run one pod in the same namespace to capture the logs on cluster
 kubectl run nginx --image=nginx --restart=Never
 kubectl run mycurlpod --image=curlimages/curl -i --tty -- sh
 ```
+
+### Step 05: Use below commands to perform PORT FORWARDING and access the Elasticsearch and Kibana from Browser
+```shell
+kubectl port-forward svc/elasticsearch 9200
+kubectl port-forward svc/kibana 8080
