@@ -15,7 +15,32 @@ kubectl get svc -n argocd
 
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/ca9ecc9a-9f36-4981-ace1-693db75e8c43)
 
-#### Step 03: Get the password using the below command, the username will be admin
+### Step 03: Get the password using the below command, the username will be admin
 ```shell
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/5888bd3c-cafe-4f5a-b202-93b079e6c86d)
+
+### Step 04: Deploy an application in Kubernetes using Argo CD
+#### Step 4.1: Install ArgoCD CLI depending on your system
+```shell
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+```
+```shell
+argocd login 20.24.161.133:443
+```
+#### Step 4.2: Create a New Namespace
+```shell
+kubectl create ns argohelmtest
+```
+#### Step 4.3: Use ArgoCD CLI to create the new application on argocd
+```shell
+argocd app create helm-guestbook --repo https://github.com/argoproj/argocd-example-apps.git --path helm-guestbook --dest-server https://kubernetes.default.svc --dest-namespace argohelmtest
+```
+#### Step 4.4: Check the status of the Application
+```shell
+argocd app get helm-guestbook
+```
+
