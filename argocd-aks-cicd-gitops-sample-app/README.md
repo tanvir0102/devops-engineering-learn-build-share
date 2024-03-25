@@ -57,6 +57,7 @@ kubectl patch svc helm-guestbook -n argohelmtest -p '{"spec": {"type": "LoadBala
 ### Step 5: Create an App using a Manual Approach
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/a2c7a7e8-6bba-4796-b47e-df7f450ee14e)
 ![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/94f0a963-4c50-4316-8e38-426056221084)
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/066a3bb4-05f1-480b-8f7b-2634a7bb5903)
 
 
 
