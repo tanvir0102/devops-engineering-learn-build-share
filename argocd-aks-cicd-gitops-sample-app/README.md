@@ -11,4 +11,11 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 kubectl get svc -n argocd
 ```
 ### Step 02: Log in to ArgoCD UI by following the below steps
-[ArgoCD Login URL using the Public IP](HTTP://20.24.161.133)
+[Log in to ArgoCD using the Public IP](HTTP://20.24.161.133)
+
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/ca9ecc9a-9f36-4981-ace1-693db75e8c43)
+
+#### Step 03: Get the password using the below command, the username will be admin
+```shell
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
