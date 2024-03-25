@@ -13,6 +13,10 @@
 ### Step 03: Execute Below Commands 
 ```shell
 # az account set --subscription="{Subscription_ID}"
+```
+
+### Step 04: Create the Service Principal by passing the values obtained from the previous step (appId, password, tenant).
+```shell
 # az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/{Subscription_ID}"
 # az login --service-principal -u {appId/ClientId} -p {password/client_secret} --tenant {tenant}
 ```
