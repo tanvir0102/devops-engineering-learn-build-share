@@ -1,0 +1,1 @@
+## [PREREQUISITE] [Before working on this Project, Please finish the AKS setup using Terraform](https://github.com/tanvir0102/devops-engineering-learn-build-share/tree/main/aks-iac-azure-using-terraform)
