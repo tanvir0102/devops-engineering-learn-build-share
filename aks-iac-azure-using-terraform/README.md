@@ -29,9 +29,21 @@
 
 ### Step 06: Execute the below terraform command to setup the AKS infrastructure on Azure Cloud
 ```shell
-terraform init
-terraform plan -out "plan.out"
-terraform apply plan.out
+# terraform init
+# terraform plan -out "plan.out"
+# terraform apply plan.out
 ```
 
-### Step 07: 
+### Step 07: Check the output <variable name>
+```shell
+# terraform output client_key
+```
+
+### Step 08: Configure the Kubectl to access and check the pod from the local terminal
+```shell
+# echo "$(terraform output kube_config)" > ~/devopslab
+# cat ~/devopslab
+# vim ~/devopslab (Remove the first and last line with EOT in the file devopslab)
+# export KUBECONFIG=~/devopslab
+```
+
