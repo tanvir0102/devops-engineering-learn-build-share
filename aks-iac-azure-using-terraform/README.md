@@ -47,3 +47,11 @@
 # export KUBECONFIG=~/devopslab
 ```
 
+### Step 09: Now deploy the Nginx pod in the newly created AKS Cluster
+```shell
+# kubectl apply -f k8s/deployment.yml
+# kubectl get pod
+```
+
+### Step 10: You can check the running POD in Azure Console as well, Select ak8s cluster then click on Workloads
+![image](https://github.com/tanvir0102/devops-engineering-learn-build-share/assets/8452040/21ff007c-1835-4042-888a-5188797aa163)
