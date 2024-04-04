@@ -91,3 +91,7 @@ Host :
 	$ docker run ubuntu --network=host
 
 	$ docker network ls
+### Run Jenkins using Docker Image
+```shell
+docker run jenkins/jenkins
+```
